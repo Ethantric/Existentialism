@@ -18,7 +18,8 @@
 .blur-in.show {
     opacity: 1;
     filter: blur(0px);
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Wake up" tags="" position="500,800" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Wake up" tags="" position="500,800" size="100,100">(set: $hasKnife to false)
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 |first&gt;[You wake up.]
 (t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Player&quot;)</tw-passagedata><tw-passagedata pid="2" name="The Player" tags="" position="650,800" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
@@ -34,7 +35,7 @@
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 |first&gt;[Hello.]
 (enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
-(after:1s)|second&gt;[Welcome to The Threshold.]
+(after:1s)|second&gt;[Welcome to Abyss.]
 (enchant: ?third&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 (after:3s)|third&gt;[A text-based interactive game regarding existential concepts and dilemmas.]
 (enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
@@ -46,19 +47,21 @@
 </tw-passagedata><tw-passagedata pid="4" name="Beginning 2" tags="" position="250,800" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 |first&gt;[When you see a blue border on the edges of your screen, you can click anywhere on the screen to progress.]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:5.25s)|second&gt;[Make sure you wait to read all the text before moving on.]
 (t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Beginning 3&quot;)</tw-passagedata><tw-passagedata pid="5" name="Beginning 3" tags="" position="350,800" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 |first&gt;[You will have to make numerous choices throughout the story.]
 (enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 (after:4s)|second&gt;[These choices may affect the final outcome of the game.]
 (enchant: ?third&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
-(after:7s)|third&gt;[It will not always be transparent how each decision will impact the story.]
+(after:7s)|third&gt;[It will not always be clear how each decision will impact the story.]
 (enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 (after:11s)|four&gt;[Once you make your decision, you cannot go back.]
 (enchant: ?five&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 (after:14s)|five&gt;[Have fun!]
 |linkspot&gt;[]
-(after: 16s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Begin&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="6" name="The Initial Path" tags="" position="800,800" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[
+(after: 16s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Begin&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="6" name="The Initial Path" tags="" position="800,800" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 |first&gt;[You get up, brush the leaves off your shoulders, and look around. The forest is incredibly dense, you are unable to see very far in any direction. You realize the ground beneath you is inclined, maybe you are on the side of a mountain?]
 (enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
@@ -72,12 +75,14 @@
 =|=
 |linkspot3&gt;[]
 |==|
-]
 (after: 19s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Up&quot;)[(goto: &quot;Up&quot;)]]]
 (after: 21s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Wait&quot;)[(goto: &quot;Wait&quot;)]]]
 (after: 20s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot3)[(link: &quot;Down&quot;)[(goto: &quot;Down&quot;)]]]</tw-passagedata><tw-passagedata pid="7" name="Down" tags="" position="925,875" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
-|first&gt;[You begin your descent down the hill. ]</tw-passagedata><tw-passagedata pid="8" name="Up" tags="" position="925,725" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+|first&gt;[You begin your descent down the hill.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 3s)|sec&gt;[There&#39;s more likely to be civilization down this path than up the mountain, you think to yourself. Maybe there you can find out what&#39;s going on.]
+(live:7s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The castle&quot;)]</tw-passagedata><tw-passagedata pid="8" name="Up" tags="" position="925,725" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 |first&gt;[You begin the journey upwards.]
 (enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
@@ -88,11 +93,11 @@
 |linkspot&gt;[]
 (t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Up 2&quot;)</tw-passagedata><tw-passagedata pid="9" name="Up 2" tags="" position="1050,675" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
-|first&gt;[As you continue walking, you stumble upon the crossroads the voice told you about. How could the voice know? Or does it?]
+|first&gt;[As you continue walking, you stumble upon the crossroads the voice told you about. How did the voice know this would happen? Or did it even know?]
 (enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
-(after: 7s)|sec&gt;[Regardless, the split path lies ahead.]
+(after: 8s)|sec&gt;[Regardless, the split path lies ahead.]
 (enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
-(after: 10s)|thir&gt;[&#39;&#39;Left or Right?&#39;&#39;]
+(after: 10.5s)|thir&gt;[&#39;&#39;Left or Right?&#39;&#39;]
 =|=
 =|=
 |linkspot&gt;[]
@@ -110,13 +115,16 @@
 (after: 13s)|thir&gt;[This journey is bringing you closer to the peak of the mountain. You are determined to reach it. Surely what you are seeking will be waiting for you there.]
 (t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Left 2&quot;)</tw-passagedata><tw-passagedata pid="11" name="Right" tags="" position="1175,750" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
-|first&gt;[You ignore the voice and venture to the right.]</tw-passagedata><tw-passagedata pid="12" name="Left 2" tags="" position="1300,525" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+|first&gt;[You ignore the voice and venture to the right. You understandably doubted the voice, unsure of what its intentions might be.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 7s)|sec&gt;[Could it have provided answers? Maybe, maybe not. Hopefully you won&#39;t be burdened by it again.]
+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The crystal ball&quot;)</tw-passagedata><tw-passagedata pid="12" name="Left 2" tags="" position="1300,525" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 |first&gt;[Further up the mountain, you meet a fellow traveler. The traveler was descending from the peak of the mountain, talking about how amazing the view was from up there!]
 (enchant: ?firsts&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 (after: 8.5s)|firsts&gt;[The traveler seems like good company. You talk briefly about your situation, and he seems surprisingly understanding.]
 (enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
-(after: 15.5s)|sec&gt;[The traveler asks you to join them on their journey down the mountain, offering you to join his community. He offers food, shelter, comfort, and even a sense of purpose.]
+(after: 15.5s)|sec&gt;[The traveler asks you to join him on their journey down the mountain, offering you to join his community. He offers food, shelter, comfort, and even a sense of purpose.]
 (enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 (after: 25s)|thir&gt;[As you ponder the thought of joining the traveler, the voice suddenly returns and surrounds you: //&#39;&#39;You must walk the path alone&#39;&#39;//.]
 (enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
@@ -140,7 +148,12 @@
 (after: 14s)|four&gt;[//Madness?//]
 (t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Walk alone 2&quot;)</tw-passagedata><tw-passagedata pid="14" name="Join" tags="" position="1425,600" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
-|first&gt;[You enthusiastically accept the traveler&#39;s offer. Finally, someone else you can talk to other than that voice in your head. Hopefully they can give some answers or at least guide you to the right path.]</tw-passagedata><tw-passagedata pid="15" name="Walk alone 2" tags="" position="1550,375" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+|first&gt;[You enthusiastically accept the traveler&#39;s offer. Finally, someone else you can talk to other than that voice in your head. Hopefully they can give some answers or at least guide you to the right path.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 11s)|sec&gt;[Although, you do wonder if it was wise to ignore the voice. Will it ever come back on your journey? What potential consequences could ignoring the voice possibly incur?]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 20s)|thir&gt;[Eh, who cares.]
+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Small village&quot;)</tw-passagedata><tw-passagedata pid="15" name="Walk alone 2" tags="" position="1550,375" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 |first&gt;[You are now stopping more frequently to catch your breath. The thinning air is beginning to make you light-headed. You must be getting close.]
 (enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
@@ -166,11 +179,14 @@
 ]
 (after: 21s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Go Up&quot;)[(goto: &quot;Up&quot;)]]]
 (after: 23s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Keep Waiting&quot;)[(goto: &quot;Stagnation&quot;)]]]
-(after: 22s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot3)[(link: &quot;Go Down&quot;)[(goto: &quot;Down&quot;)]]]</tw-passagedata><tw-passagedata pid="17" name="Stagnation" tags="" position="800,550" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[
+(after: 22s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot3)[(link: &quot;Go Down&quot;)[(goto: &quot;Down&quot;)]]]</tw-passagedata><tw-passagedata pid="17" name="Stagnation" tags="" position="800,550" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 |first&gt;[Your inaction reaps no rewards. You keep waiting, waiting, waiting...]
 (enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
-(after: 5s)|sec&gt;[Eventually, the forest reclaims you. The world kept spinning]
+(after: 5s)|sec&gt;[Eventually, the forest reclaims you. Regardless of if your motive for inaction was fear, hoping someone would rescue you, or anything else - it got you nowhere. You did not put yourself out into the world and thus the world gave nothing in return.]
+
+|linkspot&gt;[]
+(after: 19s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Start over?&quot;)[(goto: &quot;Wake up&quot;)]]]
 </tw-passagedata><tw-passagedata pid="18" name="Walk alone 3" tags="" position="1675,300" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 |first&gt;[Once you reach the other side, you breathe a sigh of relief that you made it. There are two lit torches at the end of the bridge, which is fortunate considering the sun is setting and you will eventually need to find your way back.]
@@ -205,7 +221,20 @@
 |first&gt;[You ignore the voice. What logical sense would it make to burn your only path back? This way, you can continue the journey with a sense of security that you can always go back.]
 (t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Alt cliff&quot;)</tw-passagedata><tw-passagedata pid="22" name="Alt cliff" tags="" position="1925,450" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
-|first&gt;[You ignore the voice. What logical sense would it make to burn your only path back? This way, you can continue the journey with a sense of security that you can always go back.]</tw-passagedata><tw-passagedata pid="23" name="The cliff 2" tags="" position="2050,150" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+|first&gt;[You finally reach the peak of the mountain. There is not much on the mountain itself, other than a pile of stacked stones from previous travelers and the narrow cliff in front of you.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 10s)|sec&gt;[You wait some time for further instructions from the voice, but all you receive in return in silence.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 16s)|thir&gt;[It appears there is nothing left for you on top of the mountain. Do you continue to wait on the peak? Or do you go back from where you came, knowing you left the path backwards intact?]
+=|=
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+=|=
+|==|
+(after: 26s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Return&quot;)[(goto: &quot;Return&quot;)]]]
+(after: 27s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Wait&quot;)[(goto: &quot;Wait cliff&quot;)]]]</tw-passagedata><tw-passagedata pid="23" name="The cliff 2" tags="" position="2050,150" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 |first&gt;[//&#39;&#39;JUMP&#39;&#39;//]
 (enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
@@ -228,8 +257,8 @@
 (after: 16s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Doubt the voice&quot;)[(goto: &quot;Dont jump&quot;)]]]
 (live: 25s)[(goto: &quot;Hesitate&quot;)]</tw-passagedata><tw-passagedata pid="25" name="Jump" tags="" position="2300,25" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
-|first&gt;[As you race off the edge and take your first step onto the air below, you somehow feel that the abyss is not merely just the void, but also a presence, as if calling you home. The weight of reason vanishes. In this moment, you are neither falling nor rising. You are suspended in the absurd, and yet, you are comforted. Whether by divine presence or by madness, the choice was yours, and in that, you are free.]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Knight of Faith&quot;)</tw-passagedata><tw-passagedata pid="26" name="Dont jump" tags="" position="2300,150" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+|first&gt;[As you race off the edge and take your first step onto the air below, you know that the abyss is not merely just the void, but also a presence, as if calling you home. The weight of reason vanishes. In this moment, you are neither falling nor rising. You are suspended in the absurd, and yet, you are comforted. Whether by divine presence or by madness, the choice was yours, and in that, you are free.]
+(live:12s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Initial Path&quot;)]</tw-passagedata><tw-passagedata pid="26" name="Dont jump" tags="" position="2300,150" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 |first&gt;[You embrace reason. After all, why should you leap to your seemingly guaranteed demise?]
 (enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
@@ -240,44 +269,644 @@
 (after: 18s)|four&gt;[Silence. That is all get for blindly listening to the voice up to this point. And that is all you will receive. For to receive any consolation, one must put aside their ethics and belief in the rational and fully embrace faith in something greater.]
 (enchant: ?five&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 (after: 31s)|five&gt;[Instead, you now sit on top of the mountain as the sun disappears, and come to terms with the realization you scorched your only path down.]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Failed knight&quot;)</tw-passagedata><tw-passagedata pid="27" name="Hesitate" tags="" position="2300,275" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(live:33s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Initial Path&quot;)]</tw-passagedata><tw-passagedata pid="27" name="Hesitate" tags="" position="2300,275" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 |first&gt;[While you hesistated to make your decision, the universe made it for you. The cliff crumbles beneath your feet.]
 (enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
 (after: 6s)|sec&gt;[As you plummet, you ponder if this is your punishment for not having true faith in your decision. For if you had obeyed, you would be soaring through the air into the unknown instead of the side of the mountain.]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The fall&quot;)</tw-passagedata><tw-passagedata pid="28" name="Knight of Faith" tags="" position="2425,25" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(live:9s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Initial Path&quot;)]</tw-passagedata><tw-passagedata pid="28" name="Knight of Faith" tags="" position="2425,25" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
 |first&gt;[//&quot;As the individual he became higher than the universal&quot;//]
 (enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
 (after:4s)|second&gt;[-Søren Kierkegaard]
-(live: 8s)[(goto: &quot;Play again&quot;)]</tw-passagedata><tw-passagedata pid="29" name="Play again" tags="" position="150,675" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 |linkspot&gt;[]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="30" name="Failed knight" tags="" position="2425,150" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(after: 8s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="29" name="Failed knight" tags="" position="2425,150" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
 |first&gt;[//&quot;So he recognizes the impossibility, and that very instant he believes the absurd; for, if without recognizing the impossibility with all the passion of his soul and with all his heart, he should wish to imagine that he has faith, he deceives himself, and his testimony has no bearing, since he has not even reached the infinite resignation&quot;//]
 (enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
 (after:18s)|second&gt;[-Søren Kierkegaard]
-(live: 22s)[(goto: &quot;Play again&quot;)]</tw-passagedata><tw-passagedata pid="31" name="The fall" tags="" position="2425,275" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+
+|linkspot&gt;[]
+(after: 22s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="30" name="The fall" tags="" position="2425,275" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
 |first&gt;[//&quot;Anxiety is the dizziness of freedom&quot;//]
 (enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
 (after:3s)|second&gt;[-Søren Kierkegaard]
-(live: 8s)[(goto: &quot;Play again&quot;)]</tw-passagedata></tw-storydata>
+
+|linkspot&gt;[]
+(after: 7s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="31" name="Return" tags="" position="2050,375" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You decide to return down the mountain. As you recross the bridge, you realize your unwillingness to burn the bridge represents your inability to commit to faith in favor of certainty. Your hesitation sealed your fate.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 12s)|sec&gt;[Yes, you return to the path you once knew and have avoided the uncertainty that came with faith. But in doing so, have you forsaken something greater?]
+(live:14s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Initial Path&quot;)]</tw-passagedata><tw-passagedata pid="32" name="Wait cliff" tags="" position="2050,525" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You continue to wait on top of the peak for the guidance that will never arrive. You never fully embraced taking the necessary risks so you could preserve certainty. You believe caution is a virtue, but have you considered it may just be a product of fear? Now, you have been confronted with the choice to keep moving and have decided to do nothing.]
+
+(live:15s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Slave&quot;)]</tw-passagedata><tw-passagedata pid="33" name="Hollow" tags="" position="2175,375" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;To dare is to lose one&#39;s footing momentarily. Not to dare is to lose oneself&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:6s)|second&gt;[-Søren Kierkegaard]
+
+|linkspot&gt;[]
+(after: 10s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="34" name="Slave" tags="" position="2175,525" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;For without risk there is no faith, and the greater the risk, the greater the faith.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:5s)|second&gt;[-Søren Kierkegaard]
+
+|linkspot&gt;[]
+(after: 8s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="35" name="Small village" tags="" position="1550,600" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[After around an hour of walking down the trail and conversing with the traveler, you finally reach your destination the traveler calls home]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 8s)|sec&gt;[Upon first glance, it appears to be a small, cozy farming village. Farmers are out in the field, blacksmiths pounding at their anvils, children playing in the streets.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 17s)|thir&gt;[&quot;Follow me&quot;, says the traveler. &quot;Let me show you around&quot;]
+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Small village 2&quot;)</tw-passagedata><tw-passagedata pid="36" name="Small village 2" tags="" position="1675,600" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[On the walk through the village, the traveler starts to lay out the conditions for being able to live amongst his people.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 8s)|sec&gt;[The traveler insists that everyone in this society has a predetermined role to follow so that all can prosper. As long as you follow your role, you will have a place to settle, a job, and a structured easy-going life.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 20s)|thir&gt;[You would not be able to choose your role, but you would receive stability. A sense of purpose.]
+(after: 25s)|four&gt;[&#39;&#39;What do you do?&#39;&#39;]
+=|=
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+=|=
+|==|
+(after: 27s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Walk alone&quot;)[(goto: &quot;Conform&quot;)]]]
+(after: 28s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Join&quot;)[(goto: &quot;Leave the village&quot;)]]]</tw-passagedata><tw-passagedata pid="37" name="Conform" tags="" position="1800,600" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You accept the traveler&#39;s offer to live in the village. The blacksmith has been in need of a new apprentice, so that is where you have been assigned.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 8s)|sec&gt;[With the help of the town, your new home has been built. It&#39;s not very large by any means, which saves some of the hassle of having to furnish it.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 15.5s)|thir&gt;[Everyday you tire away creating horseshoes, hinges, axes, you name it. It doesn&#39;t get easier. But, the security of knowing you will always have food on the table, a roof over your head, and a bed to lay on at the end of each day makes it all worth it.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 28s)|four&gt;[You stop concerning yourself with what the future may hold. The endless possibilities of what could have been fades away. All that you know and understand is the tasks that each new day presents. What more could life have to offer?]
+(live:30s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The conformist&quot;)]</tw-passagedata><tw-passagedata pid="38" name="Leave the village" tags="" position="1800,700" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You decline the traveler&#39;s offer. He seems confused, wondering why you would reject a comfortable life to wander into the unknown. You do not answer, because you do not know what lies ahead either.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 10s)|sec&gt;[However, you are not worried. All that matters to you is that you chose it. You have rejected not only the uncertainty from the voice, but also the security the village offered.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 19s)|thir&gt;[You are neither saved nor condemned. You will not ask others which way is right for you. You carve your own path through life.]
+
+(live:21s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The wanderer&quot;)]</tw-passagedata><tw-passagedata pid="39" name="The conformist" tags="" position="1925,600" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;The struggle itself towards the heights is enough to fill a man&#39;s heart. One must imagine Sisyphus happy.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:7s)|second&gt;[-Albert Camus]
+
+|linkspot&gt;[]
+(after: 10s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="40" name="The wanderer" tags="" position="1925,700" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;Man is nothing else but what he makes of himself&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:4s)|second&gt;[- Jean-Paul Sartre]
+
+|linkspot&gt;[]
+(after: 7s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="41" name="The castle" tags="" position="1050,950" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[As you reach the bottom of the path and break the treeline, you see a large castle not too far away. Perhaps civilization carries the answers you seek. The castle itself does not seem familiar, but considering your memories have dissipated you wouldn&#39;t remember if you lived your whole life there anyways.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 16s)|sec&gt;[On your way towards the castle, you see a small chest hidden in a nearby bush. Upon opening the chest, you discover a small knife wrapped in cloth. You pick it up to look at it closer, the knife has jewels embedded within the handle itself. It must belong to someone very wealthy.]
+(enchant: ?thi&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:30s)|thi&gt;[&#39;&#39;Do you take the knife?&#39;&#39;]
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+|==|
+(after:33s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Keep&quot;)[(set: $hasKnife to true)(goto: &quot;The Gates&quot;)]]]
+(after:33s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Put Back&quot;)[(set: $hasKnife to false)(goto: &quot;The Gates&quot;)]]]</tw-passagedata><tw-passagedata pid="42" name="The crystal ball" tags="" position="1300,825" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[As you walk, you hear distant whispers. Not like the voice from before, somehow these whispers sound like your own?]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 7s)|sec&gt;[You look off to the right and see something peculiar. You walk off the path through the brush, and into a perfectly circular clearing carved in the forest. In the exact center of this clearing is a crystal ball sitting on top of a pedestal. It appears very murky, fading between bright green and emerald in color. The whispers grow louder.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 24s)|thir&gt;[Your gut tells you to back away, and yet you walk up to it.]
+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Crystal ball 2&quot;)</tw-passagedata><tw-passagedata pid="43" name="Crystal ball 2" tags="" position="1425,825" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You peer into the crystal ball, wondering of its nature. As you get closer, you see people within the clouds. Strangely, its as though you are peering through someone else&#39;s eyes at this very moment in time.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 10.5s)|sec&gt;[What you are seeing seems incredibly familiar, like you have lived these events in a past life. Or wait, could it even have been this one?]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 18s)|thir&gt;[It all begins to add up. Why the ball is specifically showing you these events, the reason it all seems so familiar: these are //your// memories.]
+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Crystal ball 3&quot;)</tw-passagedata><tw-passagedata pid="44" name="Crystal ball 3" tags="" position="1550,825" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You keep looking, reliving your past memories one by one. These memories could lead to understanding who you are, what led you to where you are now, and even what your purpose in life is.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 10s)|sec&gt;[You look away from the crystal ball for a moment and realize - its already nighttime. You spent so long looking at your past memories, time flew by and you did not even realize it.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 19s)|thir&gt;[You could keep looking into the crystal ball to acquire more of your previous memories. After all, it could be useful to know more about yourself. But you also consider the irregularity of time while looking into the ball. How much more time would pass without realizing it?]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after: 33s)|four&gt;[&#39;&#39;Do you keep looking?&#39;&#39;]
+=|=
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+=|=
+|==|
+(after: 35s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Keep looking&quot;)[(goto: &quot;Keep looking&quot;)]]]
+(after: 36s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Stop looking&quot;)[(goto: &quot;Stop looking&quot;)]]]</tw-passagedata><tw-passagedata pid="45" name="Keep looking" tags="" position="1675,825" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You continue peering into the orb, and the world continues moving while you reminisce on your past memories. Although it feels you are watching from another&#39;s perspective, you attach yourself to each of these memories. This is who you believe you are and all you will be.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 14s)|sec&gt;[You come to realize that you will not be able to go back. All that is behind you will remain there untouched, preserved in memory. And yet you continue to sit there. You waste away gazing into the orb as many have done before you. You allow your past memories - ones of happiness, sadness, fulfillment, love - to consume you.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 30s)|thir&gt;[Instead of living in the moment and creating a new sense of self, you allow your past to define you.]
+(live:32s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Consume&quot;)]</tw-passagedata><tw-passagedata pid="46" name="Stop looking" tags="" position="1675,950" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You stop looking at your past memories and back away. You realize that your past does not define who you are and does not dictate your future. //You// create yourself and lay your own path.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 9.5s)|sec&gt;[You sense a shift in the very air around you. You look at the crystal ball and see it changing from its original emerald color to more of a navy blue. Almost as if it was reading your mind, you know what it offers you now: A glimpse into your future.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 22s)|thir&gt;[While the past is written in stone, the future very well might not be. Is your story linear? Or are there endless possibilities for how your journey could end?]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 30s)|four&gt;[These questions eat up your thoughts. Your journey is all about finding answers, and this very well could lead you right to them. But you also sense darkness within the orb, as if a curse lies within it. You know that if you look, you might not be able to stop yourself from seeing your potential futures.]
+(enchant: ?five&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after: 45s)|five&gt;[&#39;&#39;What do you do?&#39;&#39;]
+=|=
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+=|=
+|==|
+(after: 47s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Smash the orb&quot;)[(goto: &quot;Smash&quot;)]]]
+(after: 48s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;See your future&quot;)[(goto: &quot;Look at future&quot;)]]]
+</tw-passagedata><tw-passagedata pid="47" name="Consume" tags="" position="1800,825" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;We are so unwise that we wander about in times that do not belong to us, and do not think of the only one that does; so vain that we dream of times that are not and blindly flee the only one that is. The fact is the present usually hurts.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:13s)|second&gt;[-Blaise Pascal]
+
+|linkspot&gt;[]
+(after: 16s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="48" name="Smash" tags="" position="1800,950" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You hold the orb in your palm, fully contemplating its promise to grant you answers. However, you reject its offer to glimpse at who you once were, who you might become. For you realize that memorizing a future path is not living - nor is it freedom. Whatever path you follow would be one of certainty, not choice.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 16s)|sec&gt;[//You huck the crystal ball into a nearby tree, shattering it into dust.//]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 20s)|thir&gt;[There was nothing the crystal ball could truly grant you. It only offered you the truth - a reflection of your potential. You need not ask it to guide you, for you choose your own path and know that it is yours to walk.]
+(live:30s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The authentic&quot;)]</tw-passagedata><tw-passagedata pid="49" name="Look at future" tags="" position="1800,1075" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You let temptation get the best of you and gaze into the orb once more. You perceive hundreds - if not thousands - of potential futures lying ahead of you. Each future determined by even the slightest choice. So much meaning in each decision, even the ones you didn&#39;t think had any.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 14.5s)|sec&gt;[You sit there for days realizing your endless potential. You consider the multiple paths that lie ahead and struggle to figure out which one you desire most. There are so many choices, you want to be sure to get the best one.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 26s)|thir&gt;[And yet you sit there. Paralyzed. Terrified that the path you choose might not be the correct one. You watch your futures play out ahead of you in real-time while you proceed to not pursue any of them. You have no idea how long you have been sitting in front of the orb.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 40s)|four&gt;[All of a sudden, some of your futures begin disappearing. One by one. You quickly understand that just sitting there pondering what the correct future could possibly be is a decision preventing you from being able to achieve it. While you sat and dreamed of what your ideal future is, your inaction towards making that future a reality prevented you from being able to live it. In trying to live all lives, you have lived none.]
+(live:60s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Dreamer&quot;)]</tw-passagedata><tw-passagedata pid="50" name="The Dreamer" tags="" position="1925,1075" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;Life is not a problem to be solved, but a reality to be experienced.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:5s)|second&gt;[-Søren Kierkegaard]
+
+|linkspot&gt;[]
+(after: 8s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="51" name="The authentic" tags="" position="1925,950" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;Real generosity toward the future lies in giving all to the present.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:5s)|second&gt;[-Albert Camus]
+
+|linkspot&gt;[]
+(after: 8s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="52" name="The Gates" tags="" position="1175,1025" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[(if:$hasKnife)[You keep the knife. Looks pretty valuable, maybe you can sell it to a vendor in the castle for some food and money. Also never a bad idea to be able to protect yourself.]
+(else:)[You put the knife back into the chest and close it. Whoever owns this knife is not someone you want to get on the bad side of.]]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 9s)|sec&gt;[You walk up to the castle gate and read the text arched over the gateway: &#39;&#39;KINGDOM OF BAD FAITH&#39;&#39;.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 15s)|thir&gt;[You&#39;re not really sure if it&#39;s just a weird name or an on the nose description telling you what lies ahead. Along the side of the road are severed heads on pikes, accompanied by a sign that says: &#39;&#39;WHAT HAPPENS TO THOSE WHO DISOBEY&#39;&#39;.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 27s)|four&gt;[You begin your walk into the castle.]
+
+(live:28s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Stranger&quot;)]</tw-passagedata><tw-passagedata pid="53" name="The Stranger" tags="" position="1300,1100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[Upon walking into the castle, you are immediately greeted by a stranger. How long the stranger was waiting along the interior of the gate is a mystery.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 8s)|sec&gt;[The stranger claims to know you. She eagerly tells you a story of an adventure you&#39;ve gone on together and some random factoids about yourself, which you are unable to remember any about. You tell her you cannot remember anything about her or even yourself.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 22s)|thir&gt;[She offers you the chance to follow her. According to her, we are standing in the slums of the castle which is not where you want to be. Apparently there is an inner circle of the castle which contains the upper class of civilization, but it is guarded and entrance is only allowed to those who live there.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 37s)|four&gt;[She tells you that she will take you to a place where &quot;everything makes sense&quot;]
+(enchant: ?five&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:41.5s)|five&gt;[&#39;&#39;Do you follow her?&#39;&#39;]
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+|==|
+(after:44s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Follow&quot;)[(goto: &quot;Follow her&quot;)]]]
+(after:44s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Take your own path&quot;)[(goto: &quot;Stray&quot;)]]]</tw-passagedata><tw-passagedata pid="54" name="Follow her" tags="" position="1300,1225" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You choose to follow the stranger. You are unsure if she actually knows you or not, but following her seems like a better option than just wandering around the castle alone.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 9s)|sec&gt;[You follow her through the slums towards the inner part of the castle. You look around at the run-down buildings, the tattered clothes on everyone you pass, stray animals wandering through the streets and wonder to yourself how it could get this way. The streets are packed with people walking around, sitting on the side of the road, seemingly without purpose.]
+(enchant: ?king&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 28s)|king&gt;[She tells you about the King&#39;s violent rule over this civilization. The King rules all with an iron fist, and any of those who disobey will be severely punished. Especially harsh punishments for those who live on the outer edge of civilization.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 41s)|thir&gt;[You ask the stranger who these people are and what happened to them. She tells you that they are just the Others and you should not worry about them.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 49s)|four&gt;[You struggle to internalize the lack of empathy regarding the Others. Is it not dehumanizing to categorize another person as an &quot;Other&quot;?]
+(live:50s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Child&quot;)]</tw-passagedata><tw-passagedata pid="55" name="Stray" tags="" position="1425,1175" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You tell the stranger you are not interested. You are unsure of her intentions and don&#39;t want to get played for a fool. Even though she offered a potential path for answers, you are confident you can find your own.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 12s)|sec&gt;[You venture amongst the slums of the castle. The area is packed with poorly built structures, deteriorating homes, starving citizens. It would appear as though this place was forsaken if it was not sitting within the confines of the castle.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 24s)|thir&gt;[The only way forward on your current path is through a bustling market, and so you push on.]
+(live:26s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Stranger&quot;)]</tw-passagedata><tw-passagedata pid="56" name="The Group" tags="" position="1550,1200" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[Upon emerging out of the other side of the market, you stumble upon a rather large group of people sitting in a circle. It appears as though they are waiting for something, they are all looking around as if someone or something is about to arrive.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 13s)|sec&gt;[You ask one of the members of this group about what they&#39;re doing. They said that they&#39;re waiting for a &quot;sign&quot; to tell them what to do next.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 20s)|thir&gt;[You ask what sign they&#39;re looking for, to which they don&#39;t have an answer. They urge you to wait with them. The hope is that the more they can get to wait, the faster the sign will arrive.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:30s)|four&gt;[&#39;&#39;Will you wait with them?&#39;&#39;]
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+|==|
+(after:33s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Wait&quot;)[(goto: &quot;Wait with group&quot;)]]]
+(after:33s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Continue on&quot;)[(goto: &quot;Continue on&quot;)]]]
+</tw-passagedata><tw-passagedata pid="57" name="Wait with group" tags="" position="1675,1200" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You take a seat amongst the edge of the group and wait with them. Now, instead of having to go seek answers yourself, you can wait for them to come to you instead. No more paths to weigh, no need to consider your future, or anything really.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 13s)|sec&gt;[Time passes. They keep saying a sign will come. That&#39;s what you tell yourself as well. After some time, that&#39;s all you think about. No lingering thoughts about the choices you once had or the crossroads where you once stood. You begin to truly believe that the answers in life will just come rolling in any minute. All you need to do is wait.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 31s)|thir&gt;[And wait.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 34s)|four&gt;[And wait....]
+(enchant: ?five&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 38s)|five&gt;[And wait.......]
+(live:41s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Burden of Choice&quot;)]</tw-passagedata><tw-passagedata pid="58" name="Continue on" tags="" position="1675,1325" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You pity those who sit amongst the group. It&#39;s not as if the answers are simply going to fall into their laps. You believe that one who desires answers must not only want it, but want to go //look// for them.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 12s)|sec&gt;[You ignore the group and move along. Maybe this journey won&#39;t provide answers at the end, but you sure won&#39;t find any waiting around either.]
+(live:17s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;To the door&quot;)]</tw-passagedata><tw-passagedata pid="59" name="The Burden of Choice" tags="" position="1800,1200" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;Those who conceal from themselves this total freedom, under the guise of solemnity, or by making deterministic excuses, I will call cowards.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:9s)|second&gt;[- Jean-Paul Sartre]
+
+|linkspot&gt;[]
+(after: 12s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="60" name="To the door" tags="" position="1800,1350" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[As you wander aimlessly, you feel a sort of strange sensation enter your mind. You know that you do not know where you&#39;re going, but it&#39;s as if an invisible hand is pushing you in a certain direction. Like you are being guided somehow even though you are not going anywhere specific.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 15s)|sec&gt;[All of a sudden, you realize something is different. Something in the air - a deafening silence. No one is around. Even though it was abundant with life just moments ago, everyone just disappeared. All of a sudden, you feel a narrow corridor call to you.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 28s)|thir&gt;[You walk down the corridor. At the end is a door with a sign: //Beyond here, you will find the answer//]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 33s)|four&gt;[This is what you have been waiting for, the answer to who you are, what your purpose is. Maybe even the meaning of life.]
+(enchant: ?five&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 40s)|five&gt;[You walk in.]
+(live:41s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Door&quot;)]</tw-passagedata><tw-passagedata pid="61" name="The Door" tags="" position="1925,1350" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[Inside - you find &#39;&#39;nothing&#39;&#39;. Only the empty void. Endless.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 5s)|sec&gt;[You slowly walk into the void, and nothing changes. The darkness and silence of the void encapsulates you. You come to realize there is nothing more to find.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 12s)|thir&gt;[At first it almost feels like a joke. You call out to the universe for answers, and all you get in response is silence.]
+(enchant: ?thi&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:20s)|thi&gt;[&#39;&#39;What now?&#39;&#39;]
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+=|=
+|linkspot3&gt;[]
+|==|
+(after: 23s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Embrace&quot;)[(goto: &quot;Embrace&quot;)]]]
+(after: 23s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Despair&quot;)[(goto: &quot;Despair&quot;)]]]
+(after: 23s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot3)[(link: &quot;Turn back&quot;)[(goto: &quot;Turn back&quot;)]]]</tw-passagedata><tw-passagedata pid="62" name="Embrace" tags="" position="2050,1250" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[So this is the ultimate truth. No greater meaning. No higher being to guide you. Not even a reason you are standing there at this moment.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:7s)|sec&gt;[And you begin to laugh. You laugh because you have come to truly understand the absurdity of it all. You asked the universe for answers - and only received silence in return. There is no meaning to any of it.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:19s)|thir&gt;[With the absence of meaning or predestined purpose... you are free. Free of expectation. Free of fate. Free to carve a path that is solely your own.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:27s)|four&gt;[You venture on. Not to //find// answers or meaning, but to //make// your own.]
+(live:30s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Embrace absurdity&quot;)]</tw-passagedata><tw-passagedata pid="63" name="Despair" tags="" position="2050,1350" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[All of this was for nothing. The entire journey was meaningless. No purpose or answers behind this door - merely just an empty void.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:7s)|sec&gt;[You believed that there had to be answers. What else could there possibly be? What is there to believe in now? What&#39;s the point?]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:15s)|thir&gt;[You fall to your knees. Refusing to move. Why bother continuing on if it doesn&#39;t even mean anything?]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:21s)|four&gt;[Nothing matters.]
+(live:22s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Give up&quot;)]</tw-passagedata><tw-passagedata pid="64" name="Turn back" tags="" position="2050,1450" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[No, it can&#39;t be. This is all just a joke. This door itself is meaningless, exising only to throw you off the right path. You tell yourself there must be another way.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:9s)|sec&gt;[You know the door was the answer, but you tell yourself otherwise. It is easier to run back to the slums, where at least things appear to make sense. Instead of embracing the absurdity, you opt for denial.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:20s)|thir&gt;[Deep down you know this. But you do not care. You do not care that you are running from true freedom. You would prefer a fantasy where everything makes sense instead of the reality you find yourself in.]
+(live:22s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Denial&quot;)]</tw-passagedata><tw-passagedata pid="65" name="Embrace absurdity" tags="" position="2175,1250" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;Man stands face to face with the irrational. He feels within him his longing for happiness and for reason. The absurd is born of this confrontation between the human need and the unreasonable silence of the world.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:13s)|second&gt;[-Albert Camus]
+
+|linkspot&gt;[]
+(after: 16s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="66" name="Give up" tags="" position="2175,1350" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;Man is condemned to be free. Condemned, because he did not create himself, in other respect is free; because, once thrown into the world, he is responsible for everything he does.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:11s)|second&gt;[- Jean-Paul Sartre]
+
+|linkspot&gt;[]
+(after: 14s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="67" name="Denial" tags="" position="2175,1450" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;Man is the only creature who refuses to be what he is.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:5s)|second&gt;[- Albert Camus]
+
+|linkspot&gt;[]
+(after: 8s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="68" name="The Child" tags="" position="1300,1350" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[As you journey through the slums, you see a child sitting alone on the side of the road. It doesn&#39;t appear the child is with anyone, could he be lost? If so, is anyone going to help him?]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 10s)|sec&gt;[The child looks up and you make eye contact with him. His eyes seem desparate, as if longing for something. For a moment, the Other becomes real. As though the mystification of this other being is suddenly broken. You feel the urge to walk up to the child to help him.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 24s)|thir&gt;[As though reading your thoughts, the stranger tells you to ignore the child. She tells you the child is going to be fine, and it could just be abusing your empathy to lure you into some sort of trap.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:35s)|four&gt;[&#39;&#39;Do you help the child?&#39;&#39;]
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+|==|
+(after:38s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Help&quot;)[(goto: &quot;Help&quot;)]]]
+(after:38s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Ignore&quot;)[(goto: &quot;Ignore&quot;)]]]</tw-passagedata><tw-passagedata pid="69" name="Help" tags="" position="1375,1475" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You ignore the stranger&#39;s apathy and approach the boy. You ask the boy if he needs help finding someone, to which the boy nods. You offer your hand to help him up.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 8s)|sec&gt;[You turn around to see the stranger has disappeared. Does she believe you are forsaken for helping what she considers as the Other?]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 15s)|thir&gt;[You don&#39;t have time to ponder these thoughts. Your focus is now on helping the child.]
+(live:20s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Child&quot;)]</tw-passagedata><tw-passagedata pid="70" name="Ignore" tags="" position="1225,1475" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You heed the stranger&#39;s advice and ignore the seemingly stranded child. You break eye contact and accept the concept of the Other. It feels a lot easier to focus on what&#39;s at hand when you can detach feeling for the Others.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 12s)|sec&gt;[You walk past and don&#39;t think about it again.]
+(if:$hasKnife is true)[(live:12s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Knife Action&quot;)]]
+(if:$hasKnife is false)[(live:12s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Blunt Force&quot;)]]</tw-passagedata><tw-passagedata pid="71" name="Knife Action" tags="" position="1150,1575" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You reach the inner castle gates. It appears they are lightly guarded to prevent the Others from going where they are not supposed to. The stranger pulls you aside into an alleyway. She tells you that even though she can get through, you will be unable to since you don&#39;t have any papers. She asks if you have anything to help you get past the guards.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 18s)|sec&gt;[You tell her the only thing you have is the knife you found on the way into the castle. You also say you don&#39;t want violence and ask if there is another way into the inner castle.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 28s)|thir&gt;[She says not to worry, she will handle the situation. She tells you to give her the knife even though she doesn&#39;t plan to use it. She wants to be able to protect both of you in case something happens.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:38s)|five&gt;[&#39;&#39;Do you give her the knife?&#39;&#39;]
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+|==|
+(after:41s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Give&quot;)[(goto: &quot;Give&quot;)]]]
+(after:41s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Do not give&quot;)[(goto: &quot;Do not comply&quot;)]]]</tw-passagedata><tw-passagedata pid="72" name="Blunt Force" tags="" position="1275,1575" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You reach the inner castle gates. It appears they are lightly guarded to prevent the Others from going where they are not supposed to. The stranger pulls you aside into an alleyway. She tells you that even though she can get through, you will be unable to since you don&#39;t have any papers. She asks if you have anything to help you get past the guards.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 18s)|sec&gt;[You tell her you do not have anything that you can use. She seems frustrated, and tells you that you must fight the guard to get through.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 26s)|thir&gt;[She says not to worry, you will both be able to get through once it is done.]
+(enchant: ?five&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:32s)|five&gt;[&#39;&#39;What do you do?&#39;&#39;]
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+|==|
+(after:35s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Fight&quot;)[(goto: &quot;Fight&quot;)]]]
+(after:35s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Leave&quot;)[(goto: &quot;Do not comply&quot;)]]]</tw-passagedata><tw-passagedata pid="73" name="Give" tags="" position="1100,1675" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You give her the knife. She tells you to wait around the corner and to wait for her to come get you.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:6s)|sec&gt;[You do what she says and wait just out of eyesight of the guards. At this point, you trust her enough to be able to figure something out that will allow you through. You&#39;re not quite sure how just yet, but it&#39;s not your concern to know just yet.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:19s)|thir&gt;[A few moments pass, and the stranger rushes back to you telling you that you need to go &#39;&#39;//now//&#39;&#39;. You ask what the rush is, but then you see the blood dripping from the tip of the knife.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:28s)|four&gt;[She tells you that before you can go, you //must// obey each of her commands from here on. No matter what. What she says goes and you do not get a say in the matter.]
+(enchant: ?five&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:37s)|five&gt;[&#39;&#39;What do you say?&#39;&#39;]
+(live:40s)[(force-input-box:2bind $obey,&quot;=XX=&quot;,&quot;I will obey&quot;)]
+(event: when $obey is &quot;I will obey&quot;)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Obey&quot;)]</tw-passagedata><tw-passagedata pid="74" name="Do not comply" tags="" position="1350,1675" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You do not comply. You tell her that you have been willing to help out this far, but no further. You leave the alleyway.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 7s)|sec&gt;[You step out into the street and see something very confusing. Masses of people line the side of the street bowing towards the center. You are unsure why, until you hear the clip-clop of horses approaching. Could someone important be right around the corner?]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 21s)|thir&gt;[A hush falls over the crowd. No one talks, whispers, or even breathes. Even the wind pauses for but a moment. Then he appears.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:28s)|four&gt;[Cloaked in red and gold, a crown resting upon his head just above his brow. He walks towards you surrounded by guards and cavalry. No one on the road is looking anywhere but the stone that lay beneath them.]
+(enchant: ?five&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:39s)|five&gt;[And then - he stops before you.]
+(enchant: ?six&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:42s)|six&gt;[&#39;&#39;What do you do?&#39;&#39;]
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+|==|
+(after:45s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Kneel&quot;)[(goto: &quot;Kneel&quot;)]]]
+(after:45s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Stand&quot;)[(goto: &quot;Stand&quot;)]]]
+(live: 50s)[(goto: &quot;Stand&quot;)]</tw-passagedata><tw-passagedata pid="75" name="Obey" tags="" position="1075,1775" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You obey and follow her through the gate. You do not ask where you&#39;re going, nor do you wonder why at this point.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:6s)|sec&gt;[The weight of your choices lifts off your chest. The choices regarding your autonomy and future are no longer your burden to bear.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:13s)|thir&gt;[For a while, everything feels easy-going. The world is simpler when you do not have to make any difficult decisions. It feels easier to live through someone else. Though, by living through someone else, you soon realize that your steps are no longer your own. Your voice is replaced is by echoes of what she tells you. Even your thoughts are merely a mirror of her conviction.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after:32s)|four&gt;[In the search for answers, you gave up pure freedom for the certainty in the path of the least resistance. It is a choice you continuously make every day.]
+(live:36s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The shadow&quot;)]</tw-passagedata><tw-passagedata pid="76" name="The shadow" tags="" position="1050,1875" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;He who cannot obey himself will be commanded.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:5s)|second&gt;[- Friedrich Nietzsche]
+
+|linkspot&gt;[]
+(after: 8s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="77" name="Fight" tags="" position="1225,1675" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[She tells you that she will keep a lookout while you fight the guard. You agree with her idea that this is the best way forward.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 7s)|sec&gt;[You attempt to subdue the guard, but quickly realize the mistake of bringing fists to a swordfight. In a short moment, you were on the ground knowing you were never going to get back up.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 17s)|thir&gt;[As you lay there, you see her running away and you realize what had happened to you. You never really knew who she was, what her purpose was. But whatever her purpose was, you let it become your cause.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 27s)|four&gt;[You were nothing but a tool to her. A potential means to her end. You could have created your own journey. You could have chosen your own ending. But instead, you actively chose to die for hers.]
+(live:35s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The cost of obedience&quot;)]</tw-passagedata><tw-passagedata pid="78" name="The cost of obedience" tags="" position="1200,1775" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;He who cannot obey himself will be commanded.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:5s)|second&gt;[- Friedrich Nietzsche]
+
+|linkspot&gt;[]
+(after: 8s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="79" name="Stand" tags="" position="1475,1775" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[Whether out of fear, indecisiveness, or desire to stand up to the King, you find yourself standing before him staring eye to eye. Knees locked in place as if your legs turned into planks of wood. Was this choice an act of courage? Defiance in the face of oppression? Or simply just foolish?]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 15s)|sec&gt;[He talks with a slight amusement in his voice, as if he&#39;s about to enjoy what&#39;s to follow, &quot;Look around you. Every soul here kneels. And yet, here you stand? Do you think yourself noble?&quot;]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 25s)|thir&gt;[You stand paralyzed; your voice trapped in your throat, unable to escape. You notice some of the Others begin looking up off the ground in awe.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 33s)|four&gt;[&quot;Your benevolent King will offer you one last chance to kneel. Otherwise, you will suffer for your disobedience.&quot;]
+(enchant: ?six&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:40s)|six&gt;[&#39;&#39;What do you do?&#39;&#39;]
+(if:$hasKnife is true)[
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+=|=
+|linkspot3&gt;[]
+|==|
+(after: 43s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Keep Standing&quot;)[(goto: &quot;Keep Standing&quot;)]]]
+(after: 43s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Run&quot;)[(goto: &quot;Run&quot;)]]]
+(after: 43s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot3)[(link: &quot;Stab&quot;)[(goto: &quot;Stab&quot;)]]]
+(live: 50s)[(goto: &quot;Keep Standing&quot;)]]
+(if:$hasKnife is false)[
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+|==|
+(after: 43s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Keep Standing&quot;)[(goto: &quot;Keep Standing&quot;)]]]
+(after: 43s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Run&quot;)[(goto: &quot;Run&quot;)]]]
+(live: 50s)[(goto: &quot;Keep Standing&quot;)]]</tw-passagedata><tw-passagedata pid="80" name="Kneel" tags="" position="1350,1800" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You choose to kneel along with the rest of the masses. To fight against the King is effectively willing your own demise. Your life for your voice is a trade you are willing to accept. At least now you can hope the King will have mercy on his loyal subject.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 15s)|sec&gt;[&quot;A wise choice&quot; The King tells you. &quot;Your clothes tell me you are not from here. I demand you tell me at once where you come from!&quot;]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 23s)|thir&gt;[You tell him you do not know and that you have lost your memories.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 33s)|four&gt;[&quot;In that case, I shall grant you a purpose.&quot; He offers you a position within the castle&#39;s army, where you would help maintain his order.]
+(enchant: ?six&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:34s)|six&gt;[&#39;&#39;What do you do?&#39;&#39;]
+=|=
+|linkspot&gt;[]
+=|=
+|linkspot2&gt;[]
+|==|
+(after:37s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot)[(link: &quot;Accept&quot;)[(goto: &quot;Willfully join&quot;)]]]
+(after:37s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(append: ?linkspot2)[(link: &quot;Reject&quot;)[(goto: &quot;Unwillful participant&quot;)]]]</tw-passagedata><tw-passagedata pid="81" name="Keep Standing" tags="" position="1625,1700" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You do not kneel, even as the guards close in around you. Even as the king snaps his fingers and your fate is sealed. It is not fear that you feel in this moment - it is clarity. Clarity that comes from standing up for something, even if no one else will.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 14s)|sec&gt;[You could have bent the knee and possibly lived to see another day. But to you, a life of subjugation and bending to others&#39; will is not a life at all.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 22s)|thir&gt;[You don&#39;t just do it for yourself. Not just because you believe in personal freedom. But because as the Others watch, you hope this act shows it is still possible to stand.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 32s)|four&gt;[And so you smile. Because with your final breaths, you are free. Only you, your choice, your defiance. This is enough.]
+(live:36s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Final Stand&quot;)]</tw-passagedata><tw-passagedata pid="82" name="Stab" tags="" position="1600,1800" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[Merely standing up to the King in protest is not enough in your mind. You decide to take matters into your own hands. You take the knife out of your back pocket and attempt to stab the King.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 11s)|sec&gt;[You manage to stick the knife into the side, but this only wounded him. Before you know it, you are struck down as well. You know that your action was not enough to overthrow the monarchy and the King will continue to rule.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 23s)|thir&gt;[But you know one thing for sure - the Others saw the King bleed.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 28s)|four&gt;[Maybe seeing the King is merely a mortal man is enough for the Others to revolt. Maybe nothing will change. You will never know. But, taking action as opposed to running or doing nothing is satisfaction enough.]
+(live:36s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Fighter&quot;)]</tw-passagedata><tw-passagedata pid="83" name="Run" tags="" position="1575,1900" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You run. Not necessarily because it was the right thing to do, but because the alternative would be a far scarier outcome. At the very least, this is your best chance at self-preservation.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 11s)|sec&gt;[The guards chase after you, but you don&#39;t turn around. You keep running.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 16s)|thir&gt;[In fleeing, you avoided the painful outcome and maintained your life. But in a sense, you are also fleeing responsibility. You knew what the King has done and what he is capable of, and yet you run with no intention of going back.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 28.5s)|four&gt;[When the universe called for you to stand for something, you chose to run instead.]
+(live:32s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Flight&quot;)]</tw-passagedata><tw-passagedata pid="84" name="The Final Stand" tags="" position="1750,1700" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:8s)|second&gt;[- Albert Camus]
+
+|linkspot&gt;[]
+(after: 11s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="85" name="Willfully join" tags="" position="1275,1925" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You vehemently accept the King&#39;s gracious offer. You couldn&#39;t pass up an opportunity to not only be accepted into the inner part of the castle, but also to join his ranks.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 10s)|sec&gt;[You pass by the Others as they now bow down before you as well. You accept the ideology that they are just faceless figures that exist beneath you. You tell yourself that they chose this way of life. You tell yourself that order is essential.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 23s)|thir&gt;[You jumped on the opportunity to rise through the ranks and chose to suppress those beneath you. This path only benefits you. You do not need the praise of the Others. You only need their silence.]
+(live:30s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Oppressor&quot;)]</tw-passagedata><tw-passagedata pid="86" name="Unwillful participant" tags="" position="1425,1925" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You reject the King&#39;s offer to join his ranks. Despite the purpose and potential he offers, you still choose to go down your own path.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 8s)|sec&gt;[However, the King does not see it that way.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 12s)|thir&gt;[&quot;HA! That was a funny joke. I now have a new purpose for you - to become my new Jester!&quot;]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 19s)|four&gt;[And so that is what you become. Out of fear for your own survival, you play along with the King&#39;s demand and present the image of yourself as the Jester. You play your part well. You become the part. You attach your identity to this role.]
+(enchant: ?five&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 30s)|five&gt;[You deny your own radical freedom to maintain survival. But is that truly living—or merely surviving as a shadow of what you could have become?]
+(live:35s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;The Jester&quot;)]</tw-passagedata><tw-passagedata pid="87" name="The Oppressor" tags="" position="1275,2050" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;Power is not a means; it is an end. One does not establish a dictatorship in order to safeguard a revolution; one makes the revolution in order to establish the dictatorship. The object of persecution is persecution. The object of torture is torture. The object of power is power.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:16s)|second&gt;[- George Orwell]
+
+|linkspot&gt;[]
+(after: 19s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="88" name="The Jester" tags="" position="1425,2050" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;The greatest hazard of all, losing one’s self, can occur very quietly in the world, as if it were nothing at all. No other loss can occur so quietly; any other loss - an arm, a leg, five dollars, a wife, etc. - is sure to be noticed.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:13s)|second&gt;[- Søren Kierkegaard]
+
+|linkspot&gt;[]
+(after: 16s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="89" name="The Child 2" tags="" position="1475,1525" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You ask the boy who he is and where he came from in an effort to help him find his way home. The boy tells you he does not have one anymore.]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 7s)|sec&gt;[His parents were slain by the King, who accused them of treason. His parents were the leaders of a small group which wanted to unite all citizens to demand elections. For obvious reasons the King was not a fan of this idea and wanted to put a swift end to it.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 20s)|thir&gt;[Despite the previous stranger&#39;s apathy towards the Others, it would seem she was at least right about the King&#39;s viciousness.]
+(live:25s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Stand Child&quot;)]</tw-passagedata><tw-passagedata pid="90" name="Stand Child" tags="" position="1475,1650" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+|first&gt;[You turn onto the main road and see something very confusing. Masses of people line the side of the street bowing towards the center. You are unsure why, until you hear the clip-clop of horses approaching. Could someone important be right around the corner?]
+(enchant: ?sec&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 14s)|sec&gt;[Suddenly, without a word, the boy takes off. Not a run towards something - running away and not looking back.]
+(enchant: ?thir&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 20s)|thir&gt;[You were so dumbfounded by the people in the streets that you did not even realize the boy left until he was already gone. You turn around to try and see where he went, but he is nowhere to be found.]
+(enchant: ?four&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;instant&#39;))
+(after: 30s)|four&gt;[You hear someone yelling behind you. You turn around to find yourself face to face with the King&#39;s Guard, who stand mere feet in front of the King himself.]
+(live:35s)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)(click-goto:?page,&quot;Stand&quot;)]</tw-passagedata><tw-passagedata pid="91" name="The Fighter" tags="" position="1725,1800" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;Every act of rebellion expresses a nostalgia for innocence and an appeal to the essence of being.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:6s)|second&gt;[- Albert Camus]
+
+|linkspot&gt;[]
+(after: 9s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata><tw-passagedata pid="92" name="Flight" tags="" position="1700,1900" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
+(enchant: ?first&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+|first&gt;[//&quot;The wish to preserve oneself is the symptom of a condition of distress, of a limitation of the really fundamental instinct of life which aims at the expansion of power and, wishing for that, frequently risks and even sacrifices self-preservation.&quot;//]
+(enchant: ?second&#39;s chars, via (t8n-delay:pos * 60) + (t8n-skip:100s) + (t8n:&#39;blur&#39;))
+(after:15s)|second&gt;[- Friedrich Nietzsche]
+
+|linkspot&gt;[]
+(after: 18s)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;blur&quot;)+(t8n-time:2s)[(replace: ?linkspot)[(link: &quot;Play again?&quot;)[(goto: &quot;Wake up&quot;)]]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
